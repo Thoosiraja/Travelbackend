@@ -26,7 +26,7 @@ func Allbus(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(busdetails)
 }
 func mailSending(Email string) {
-	mail := mailyak.New("smtp.gmail.com:587", smtp.PlainAuth("", "thoosiraja@codingmart.com", "Raja@123", "smtp.gmail.com"))
+	mail := mailyak.New("smtp.gmail.com:587", smtp.PlainAuth("", "thoosiraja@codingmart.com", "********", "smtp.gmail.com"))
 
 	mail.To(Email)
 	mail.From("way@happen.com")
